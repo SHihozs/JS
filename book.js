@@ -24,11 +24,6 @@ getAvailability(){
     } 
 }
 
-//getter
-get Availability(){
-    return this.getAvailability();
-    }   
-
 sell(numSold=1){
     this.numCopies -= numSold;
 }
@@ -39,8 +34,8 @@ restock(numCopiesStocked = 5) {
 }
 
 let book1 = new book("Doreamon","Nobi",123456,5);
-console.log(book1.Availability);
+console.log(book1.getAvailability());
 book1.restock(12);
-console.log(book1.Availability);
+console.log(book1.getAvailability());
 book1.sell(17);
-console.log(book1.Availability);
+console.log(book1.getAvailability());
